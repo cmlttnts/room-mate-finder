@@ -2,6 +2,7 @@
 build.sh
 configureAtStart.sh
 gh_page_build.sh
+.env
 # dependencies
 /node_modules
 /.pnp
