@@ -1,4 +1,14 @@
-# My React JavaScript Eslint Prettier Template
+# Roommate Finder App
+
+I am building this app to mainly learn how to use:
+
+  * User login, logout, authentication (*)
+  
+  * Embedding Google Maps Api, social media accounts etc.
+
+  * Searcing list of created post, adding a post, sorting by date, price etc. (*)
+
+*Since github pages are static websites, some of them will not be completely functional (or will be faked in client side)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
