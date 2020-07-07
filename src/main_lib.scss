@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+$link_def_color: rgb(49, 79, 214);
+
+a {
+  color: $link_def_color;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+a:link {
+  color: $link_def_color;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  background-color: unset;
+}
+a:visited {
+  color: $link_def_color;
+}
+
+$but_def_color: rgb(35, 126, 211);
+
+button {
+  background-color: $but_def_color;
+  font-size: inherit;
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  padding: unset;
+  border-radius: unset;
+  box-shadow: unset;
+}
+button:hover {
+  background-color: $but_def_color;
+}
+
+button:active {
+  box-shadow: unset_active;
+  background-color: $but_def_color;
+}
+
+.App {
+  position: relative;
+  padding-bottom: 4rem;
+}
