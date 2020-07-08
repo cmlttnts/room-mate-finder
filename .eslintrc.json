@@ -8,5 +8,8 @@
         "moduleDirectory": ["node_modules", "src/"]
       }
     }
+  },
+  "rules": {
+    "react/prop-types": 1
   }
 } 
