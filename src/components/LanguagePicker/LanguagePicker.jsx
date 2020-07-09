@@ -12,6 +12,9 @@ const LanguagePicker = () => {
   }
   return (
     <div className="LanguagePicker">
+      <span>
+        <Text tid="lang" />
+      </span>
       <button
         type="button"
         onClick={() => {

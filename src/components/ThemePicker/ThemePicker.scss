@@ -1,6 +1,59 @@
 @use "./ThemePickerVars" as ThemePicker;
-@use '../../index.scss' as index;
+@import '../../index.scss';
 
 .ThemePicker {
-  @include index.fixToTopRight;
+  @include fixToTopRight;
+  color: var(--color_main);
+  // color: white;
+  label {
+    position: relative;
+    display: flex;
+    width: 180px;
+    height: 34px;
+    padding-left: 10px;
+    align-items: center;
+  }
+
+  label input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider-round {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 67%;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+  }
+  .slider-round:before {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+  }
+
+  input:checked + .slider-round {
+    background-color: ThemePicker.$dark_mode_on;
+  }
+
+  input:focus + .slider-round {
+    box-shadow: 0 0 1px ThemePicker.$dark_mode_on;
+  }
+
+  input:checked + .slider-round:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
 }
