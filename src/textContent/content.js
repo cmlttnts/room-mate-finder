@@ -3,9 +3,10 @@ const c = {
   emptyKey: ['Boş Anahtar', 'Empty Key'],
   wrongKey: ['Yanlış Anahtar', 'Wrong Key'],
   lang: ['Dil', 'Language'],
-  tr: ['Türkçe', 'Turkish'],
-  eng: ['İngilizce', 'English'],
+  tr: ['TR', 'TR'],
+  eng: ['İNG', 'ENG'],
   title: ['Ev Aradaşı Uygulaması', 'Roommate Finder'],
+  darkMode: ['Karanlık Modu', 'Dark Mode'],
 }
 
 function getLocalText(lang = 'tr', key = 'emptyKey') {

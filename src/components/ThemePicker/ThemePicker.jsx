@@ -2,13 +2,16 @@ import './ThemePicker.scss'
 
 import React, { useContext } from 'react'
 import { ThemeContext, ThemeTypes } from 'contexts/ThemeContext/ThemeContext'
+import Text from 'components/Text/Text'
 
 const ThemePicker = () => {
   const { theme, changeTheme } = useContext(ThemeContext)
 
   return (
     <div className="ThemePicker">
-      <label htmlFor="theme">Dark Mode</label>
+      <label htmlFor="theme">
+        <Text tid="darkMode" />
+      </label>
       <input
         type="checkbox"
         name="theme"

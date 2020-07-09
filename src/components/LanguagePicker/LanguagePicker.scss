@@ -1,2 +1,13 @@
 @use "./LanguagePickerVars" as LanguagePicker;
 
+@use '../../index.scss' as index;
+
+.LanguagePicker {
+  margin-top: 2rem;
+  @include index.fixToTopRight;
+  button {
+    padding: 0.3rem;
+    border-radius: 5px;
+    margin: 5px;
+  }
+}

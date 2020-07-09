@@ -1,2 +1,6 @@
 @use "./ThemePickerVars" as ThemePicker;
+@use '../../index.scss' as index;
 
+.ThemePicker {
+  @include index.fixToTopRight;
+}
