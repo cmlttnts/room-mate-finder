@@ -44,11 +44,11 @@
   }
 
   input:checked + .slider-round {
-    background-color: ThemePicker.$dark_mode_on;
+    background-color: var(--pri_active_box_bg);
   }
 
   input:focus + .slider-round {
-    box-shadow: 0 0 1px ThemePicker.$dark_mode_on;
+    box-shadow: 0 0 1px var(--pri_active_box_bg);
   }
 
   input:checked + .slider-round:before {

@@ -9,11 +9,15 @@
 html[theme='light'] {
   --bg_main: hsl(135, 9%, 91%);
   --color_main: black;
+  --pri_cta_bg: hsl(360, 85%, 23%);
+  --pri_active_box_bg: hsl(120, 85%, 20%);
 }
 
 html[theme='dark'] {
   --bg_main: hsl(201, 31%, 15%);
   --color_main: white;
+  --pri_cta_bg: hsl(360, 85%, 63%);
+  --pri_active_box_bg: hsl(120, 85%, 60%);
 }
 
 html {
