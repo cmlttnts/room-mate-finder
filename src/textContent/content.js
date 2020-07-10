@@ -7,6 +7,7 @@ const c = {
   eng: ['İNG', 'ENG'],
   title: ['Ev Aradaşı Uygulaması', 'Roommate Finder'],
   darkMode: ['Karanlık Modu', 'Dark Mode'],
+  menu: ['MENÜ', 'MENU'],
 }
 
 function getLocalText(lang = 'tr', key = 'emptyKey') {

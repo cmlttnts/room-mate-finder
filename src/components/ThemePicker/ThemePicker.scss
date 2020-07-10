@@ -1,59 +1,58 @@
 @use "./ThemePickerVars" as ThemePicker;
 @import '../../index.scss';
+@import '../../colors.scss';
 
 .ThemePicker {
+  font-size: 1.2rem;
+  padding: 0.2rem;
+
   @include fixToTopRight;
   color: var(--color_main);
-  // color: white;
   label {
-    position: relative;
+    padding: 0.2rem;
     display: flex;
-    width: 180px;
-    height: 34px;
-    padding-left: 10px;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
-
-  label input {
+  input {
     opacity: 0;
     width: 0;
     height: 0;
   }
-
-  .slider-round {
+  span {
+    display: inline-block;
+    height: 32px;
+    background-color: grey;
+    width: 60px;
+    border-radius: 15px;
+    position: relative;
+    transition: 0.4s;
+  }
+  span::before {
+    content: '';
     position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 67%;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2px;
+    left: 2px;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
-    border-radius: 34px;
-    transition: 0.4s;
-  }
-  .slider-round:before {
-    position: absolute;
-    content: '';
-    border-radius: 50%;
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
     transition: 0.4s;
   }
 
-  input:checked + .slider-round {
+  input:checked + span {
     background-color: var(--pri_active_box_bg);
   }
 
-  input:focus + .slider-round {
+  input:focus + span {
     box-shadow: 0 0 1px var(--pri_active_box_bg);
   }
 
-  input:checked + .slider-round:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+  input:checked + span::before {
+    transform: translateX(28px);
   }
 }

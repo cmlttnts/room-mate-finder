@@ -1,11 +1,14 @@
 @use "./LanguagePickerVars" as LanguagePicker;
 
 @import '../../index.scss';
+@import '../../colors.scss';
 
 .LanguagePicker {
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: var(--color_main);
   @include fixToTopRight;
+  padding: 0.2rem;
+  font-size: 1.2rem;
   button {
     padding: 0.3rem;
     border-radius: 5px;

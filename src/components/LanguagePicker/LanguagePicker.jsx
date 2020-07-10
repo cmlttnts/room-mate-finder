@@ -15,22 +15,24 @@ const LanguagePicker = () => {
       <span>
         <Text tid="lang" />
       </span>
-      <button
-        type="button"
-        onClick={() => {
-          handleLangChange('tr')
-        }}
-      >
-        <Text tid="tr" />
-      </button>
-      <button
-        type="button"
-        onClick={() => {
-          handleLangChange('eng')
-        }}
-      >
-        <Text tid="eng" />
-      </button>
+      <div>
+        <button
+          type="button"
+          onClick={() => {
+            handleLangChange('tr')
+          }}
+        >
+          <Text tid="tr" />
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            handleLangChange('eng')
+          }}
+        >
+          <Text tid="eng" />
+        </button>
+      </div>
     </div>
   )
 }
