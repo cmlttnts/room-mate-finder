@@ -1,5 +1,7 @@
 # Roommate Finder App
 
+Live @ https://cmlttnts.github.io/room-mate-finder/
+
 I am building this app to mainly learn how to use:
 
   * User login, logout, authentication (*)
