@@ -1,0 +1,69 @@
+@use "./DropSearchListVars" as DropSearchList;
+
+.DropSearchContent {
+  background-color: var(--side_bg);
+  border: 1px solid grey;
+  box-shadow: 2px 2px 1px black;
+  position: absolute;
+  width: 247px;
+  max-height: 150px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow-y: scroll;
+  display: none;
+  opacity: 0;
+  & > div {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    border-bottom: 1px solid grey;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    display: flex;
+    padding-left: 1rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    label {
+      width: 70%;
+    }
+  }
+
+  & > div:last-of-type {
+    border: none;
+  }
+  * {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  input {
+    margin-left: 1rem;
+    width: 18px;
+    height: 18px;
+  }
+  z-index: 1;
+}
+.DropSearchContent.Active {
+  display: block;
+  // opacity: 1;
+  animation-name: contentAppear;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes contentAppear {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}

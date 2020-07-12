@@ -4,13 +4,16 @@
 .SliderPanel {
   width: 0;
   height: 100vh;
-  position: relative;
+  position: absolute;
   .SliderContent {
     display: flex;
     background-color: var(--side_bg);
+    border-radius: 25px;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+
+    z-index: 1;
     position: fixed;
     left: -100vw;
     width: 80vw;
@@ -26,6 +29,7 @@
     bottom: 0;
     left: calc(50vw - 43px);
     padding: 0.8rem 0.4rem;
+    z-index: 2;
     font-size: 1.2rem;
     border-radius: 6px;
   }

@@ -1,0 +1,13 @@
+@use "./HomeVars" as Home;
+@import '../../colors.scss';
+
+.Home {
+  padding: 1rem;
+  padding-top: 2rem;
+  background-color: var(--bg_main);
+  color: var(--color_main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

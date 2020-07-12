@@ -5,9 +5,11 @@ const c = {
   lang: ['Dil', 'Language'],
   tr: ['TR', 'TR'],
   eng: ['İNG', 'ENG'],
-  title: ['Ev Aradaşı Uygulaması', 'Roommate Finder'],
+  title: ['Roommate Finder', 'Roommate Finder'],
   darkMode: ['Karanlık Modu', 'Dark Mode'],
   menu: ['MENÜ', 'MENU'],
+  city: ['Şehir', 'City'],
+  district: ['İlçe', 'District'],
 }
 
 function getLocalText(lang = 'tr', key = 'emptyKey') {
