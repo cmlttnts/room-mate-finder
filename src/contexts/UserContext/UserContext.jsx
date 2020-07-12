@@ -5,14 +5,17 @@ const initContext = {
   isLogged: false,
 }
 
-const USER_ACTION_TYPES = {
+export const USER_ACTION_TYPES = {
   login: 0,
   logout: 1,
 }
 const userReducer = (state, action) => {
   switch (action.type) {
     case USER_ACTION_TYPES.login:
-      return { ...state, username: action.payload, isLogged: true }
+      if (action.payload.passWord === '1234')
+        // TODO: no hard coded password here, use LocalStorage for now
+        return { ...state, username: action.payload.userName, isLogged: true }
+      return state
     case USER_ACTION_TYPES.logout:
       return { ...state, username: '', isLogged: false }
     default:

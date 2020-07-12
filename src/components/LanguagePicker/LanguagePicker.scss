@@ -8,9 +8,11 @@
   color: var(--color_main);
   @include fixToTopRight;
   padding: 0.2rem;
+  padding-left: 0;
   font-size: 1.2rem;
   span {
     padding: 0.2rem;
+    padding-left: 0;
   }
   button {
     padding: 0.3rem;

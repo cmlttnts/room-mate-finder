@@ -7,6 +7,7 @@ import SliderPanel from 'components/SliderPanel/SliderPanel'
 import Home from 'pages/Home/Home'
 import Header from 'components/Header/Header'
 import SearchPost from 'components/SearchPost/SearchPost'
+import Login from 'components/Login/Login'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <SliderPanel>
         <LanguagePicker />
         <ThemePicker />
+        <Login />
       </SliderPanel>
       <Home>
         <Header />

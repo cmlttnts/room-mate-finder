@@ -1,0 +1,23 @@
+@use "./LoginVars" as Login;
+@import '../../colors.scss';
+
+.Login {
+  display: flex;
+  color: var(--color_main);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  & > * {
+    font-size: 1.2rem;
+    width: 100%;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+
+  button {
+    width: 50%;
+    max-width: 120px;
+    padding: 0.3rem;
+    border-radius: 6px;
+  }
+}

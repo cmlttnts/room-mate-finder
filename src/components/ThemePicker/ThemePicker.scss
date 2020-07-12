@@ -5,11 +5,13 @@
 .ThemePicker {
   font-size: 1.2rem;
   padding: 0.2rem;
+  padding-left: 0;
 
   @include fixToTopRight;
   color: var(--color_main);
   label {
     padding: 0.2rem;
+    padding-left: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

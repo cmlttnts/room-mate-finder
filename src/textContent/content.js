@@ -10,6 +10,8 @@ const c = {
   menu: ['MENÜ', 'MENU'],
   city: ['Şehir', 'City'],
   district: ['İlçe', 'District'],
+  username: ['Kullanıcı Adı', 'Username'],
+  password: ['Şifre', 'Password'],
 }
 
 function getLocalText(lang = 'tr', key = 'emptyKey') {
