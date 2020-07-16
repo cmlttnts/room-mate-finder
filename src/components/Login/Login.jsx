@@ -53,7 +53,12 @@ const Login = () => {
       </form>
     )
   }
-  return <p>You are logged in as {userState.username}</p>
+  return (
+    <div>
+      <p>You are logged in as {userState.username}</p>
+      <button type="button"> Logout</button>
+    </div>
+  )
 }
 
 export default Login

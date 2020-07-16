@@ -4,7 +4,7 @@ const c = {
   wrongKey: ['Yanlış Anahtar', 'Wrong Key'],
   lang: ['Dil', 'Language'],
   tr: ['TR', 'TR'],
-  eng: ['İNG', 'ENG'],
+  eng: ['ENG', 'ENG'],
   title: ['Roommate Finder', 'Roommate Finder'],
   darkMode: ['Karanlık Modu', 'Dark Mode'],
   menu: ['MENÜ', 'MENU'],
