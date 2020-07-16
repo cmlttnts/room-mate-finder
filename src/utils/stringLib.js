@@ -1,11 +1,14 @@
 /**
  * case insensitive string search, returns true if match
- * @param subString string to be searched
- * @param bigString string to be searched for
+ * @param biggerString string to be searched
+ * @param subString string to be searched for
  */
-function includesStr(subString, bigString) {
-  if (!subString || !bigString) return false
-  return subString.toLowerCase().includes(bigString.toLowerCase())
+function includesStr(biggerString, subString) {
+  if (!biggerString) return false
+  if (!subString) {
+    if (subString !== '') return false
+  }
+  return biggerString.toLowerCase().includes(subString.toLowerCase())
 }
 
 export default includesStr

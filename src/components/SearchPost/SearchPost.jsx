@@ -2,7 +2,7 @@ import './SearchPost.scss'
 
 import React from 'react'
 import Text from 'components/Text/Text'
-import { cities, districts } from 'textContent/locations'
+import { cities } from 'textContent/locations'
 import { turkishSort } from 'utils/stringLib'
 import DropSearchList from 'components/DropSearchList/DropSearchList'
 
