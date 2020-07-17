@@ -8,16 +8,25 @@ import DropSearchList from 'components/DropSearchList/DropSearchList'
 
 const sortedCities = turkishSort(cities)
 // const sortedDistricts = turkishSort(districts)
-const SearchPost = () => (
+const SearchPost = (): JSX.Element => (
   <div className="SearchPost">
     <label htmlFor="cityInput">
       <Text tid="city" />
     </label>
-    <DropSearchList sortedItems={sortedCities} nameId="cityInput" />
+    <DropSearchList
+      sortedItems={sortedCities}
+      nameId="cityInput"
+      disabled={false}
+    />
 
     <label htmlFor="district">
       <Text tid="district" />
     </label>
+    <DropSearchList
+      sortedItems={sortedCities}
+      nameId="cityInput"
+      disabled={true}
+    />
   </div>
 )
 

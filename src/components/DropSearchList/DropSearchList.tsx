@@ -7,9 +7,14 @@ import includesStr from 'utils/stringLib'
 interface PropTypes {
   sortedItems: string[]
   nameId: string
+  disabled: boolean
 }
 
-const DropSearchList = ({ sortedItems, nameId }: PropTypes): JSX.Element => {
+const DropSearchList = ({
+  sortedItems,
+  nameId,
+  disabled,
+}: PropTypes): JSX.Element => {
   const searchRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
   const [dropList, setDropList] = useState(sortedItems)
@@ -36,6 +41,7 @@ const DropSearchList = ({ sortedItems, nameId }: PropTypes): JSX.Element => {
   return (
     <div className="DropSearchList" ref={searchRef}>
       <input
+        disabled={disabled}
         type="text"
         name={nameId}
         id={nameId}
