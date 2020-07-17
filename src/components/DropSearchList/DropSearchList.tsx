@@ -4,21 +4,26 @@ import React, { useState, useRef, useCallback } from 'react'
 import useOutsideClick from 'utils/useOutsideClick'
 import includesStr from 'utils/stringLib'
 
-const DropSearchList = ({ sortedItems, nameId }) => {
-  const searchRef = useRef()
-  const contentRef = useRef()
+interface PropTypes {
+  sortedItems: string[]
+  nameId: string
+}
+
+const DropSearchList = ({ sortedItems, nameId }: PropTypes): JSX.Element => {
+  const searchRef = useRef<HTMLDivElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
   const [dropList, setDropList] = useState(sortedItems)
   const [dropActive, setDropActive] = useState('')
   const handleFocus = () => {
     setDropActive(' Active')
     if (contentRef) {
       setTimeout(() => {
-        contentRef.current.scrollTop = 0
+        if (contentRef?.current) contentRef.current.scrollTop = 0
       }, 100)
     }
   }
 
-  const handleSearchChange = (e) => {
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDropList(sortedItems.filter((item) => includesStr(item, e.target.value)))
   }
 

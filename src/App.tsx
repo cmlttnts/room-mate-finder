@@ -9,7 +9,7 @@ import Header from 'components/Header/Header'
 import SearchPost from 'components/SearchPost/SearchPost'
 import Login from 'components/Login/Login'
 
-function App() {
+function App(): JSX.Element {
   return (
     <div className="App">
       <SliderPanel>
@@ -17,6 +17,7 @@ function App() {
         <ThemePicker />
         <Login />
       </SliderPanel>
+
       <Home>
         <Header />
         <SearchPost />

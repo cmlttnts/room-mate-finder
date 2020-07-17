@@ -1,6 +1,7 @@
 const langs = ['tr', 'eng']
-const c = {
+const c: { [key: string]: string[] } = {
   emptyKey: ['Boş Anahtar', 'Empty Key'],
+
   wrongKey: ['Yanlış Anahtar', 'Wrong Key'],
   lang: ['Dil', 'Language'],
   tr: ['TR', 'TR'],
@@ -14,7 +15,7 @@ const c = {
   password: ['Şifre', 'Password'],
 }
 
-function getLocalText(lang = 'tr', key = 'emptyKey') {
+function getLocalText(lang = 'tr', key = 'emptyKey'): string {
   let langIndex = langs.indexOf(lang)
   langIndex = langIndex > -1 ? langIndex : 0
 
