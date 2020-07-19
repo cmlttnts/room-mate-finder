@@ -1,4 +1,5 @@
-const langs = ['tr', 'eng']
+export type Languages = 'tr' | 'eng'
+const langs: Array<Languages> = ['tr', 'eng']
 const c: { [key: string]: string[] } = {
   emptyKey: ['Boş Anahtar', 'Empty Key'],
 
@@ -15,7 +16,7 @@ const c: { [key: string]: string[] } = {
   password: ['Şifre', 'Password'],
 }
 
-function getLocalText(lang = 'tr', key = 'emptyKey'): string {
+function getLocalText(lang: Languages, key = 'emptyKey'): string {
   let langIndex = langs.indexOf(lang)
   langIndex = langIndex > -1 ? langIndex : 0
 

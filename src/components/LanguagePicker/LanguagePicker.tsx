@@ -1,20 +1,17 @@
 import './LanguagePicker.scss'
 
 import React, { useContext } from 'react'
-
 import { LangContext } from 'contexts/LangContext/LangContext'
-import Text from 'components/Text/Text'
+import getLocalText, { Languages } from 'textContent/content'
 
-const LanguagePicker = () => {
+const LanguagePicker = (): JSX.Element => {
   const { lang, changeLang } = useContext(LangContext)
-  const handleLangChange = (langIn) => {
+  const handleLangChange = (langIn: Languages) => {
     if (lang !== langIn) changeLang(langIn)
   }
   return (
     <div className="LanguagePicker">
-      <span>
-        <Text tid="lang" />
-      </span>
+      <span>{getLocalText(lang, 'lang')}</span>
       <div>
         <button
           type="button"
@@ -22,7 +19,7 @@ const LanguagePicker = () => {
             handleLangChange('tr')
           }}
         >
-          <Text tid="tr" />
+          {getLocalText(lang, 'tr')}
         </button>
         <button
           type="button"
@@ -30,7 +27,7 @@ const LanguagePicker = () => {
             handleLangChange('eng')
           }}
         >
-          <Text tid="eng" />
+          {getLocalText(lang, 'eng')}
         </button>
       </div>
     </div>

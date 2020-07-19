@@ -1,14 +1,16 @@
 import './SliderPanel.scss'
 
-import React, { useState, useRef, useCallback } from 'react'
-import Text from 'components/Text/Text'
+import React, { useState, useRef, useCallback, useContext } from 'react'
 import useOutsideClick from 'utils/useOutsideClick'
+import getLocalText from 'textContent/content'
+import { LangContext } from 'contexts/LangContext/LangContext'
 
 interface PropTypes {
   children: React.ReactNode
 }
 
 const SliderPanel = ({ children }: PropTypes): JSX.Element => {
+  const { lang } = useContext(LangContext)
   const [activeSlider, setActiveSlider] = useState('')
   const sliderRef = useRef(null)
   const openSlider = () => {
@@ -27,7 +29,7 @@ const SliderPanel = ({ children }: PropTypes): JSX.Element => {
       <div className={`SliderContent${activeSlider}`}>{children}</div>
       {/* TODO: extract the middle button from slide panel */}
       <button className="sideB" type="button" onClick={openSlider}>
-        <Text tid="menu" />
+        {getLocalText(lang, 'menu')}
       </button>
     </div>
   )

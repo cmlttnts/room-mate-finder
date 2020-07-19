@@ -1,14 +1,18 @@
 import './Header.scss'
 
-import React from 'react'
-import Text from 'components/Text/Text'
+import React, { useContext } from 'react'
 
-const Header = () => (
-  <header className="Header">
-    <h1>
-      <Text tid="title" />
-    </h1>
-  </header>
-)
+import getLocalText from 'textContent/content'
+import { LangContext } from 'contexts/LangContext/LangContext'
+
+const Header = () => {
+  const { lang } = useContext(LangContext)
+
+  return (
+    <header className="Header">
+      <h1>{getLocalText(lang, 'title')}</h1>
+    </header>
+  )
+}
 
 export default Header

@@ -1,16 +1,18 @@
 import './ThemePicker.scss'
 
 import React, { useContext } from 'react'
-import Text from 'components/Text/Text'
 import { ThemeContext, ThemeTypes } from 'contexts/ThemeContext/ThemeContext'
+import getLocalText from 'textContent/content'
+import { LangContext } from 'contexts/LangContext/LangContext'
 
 const ThemePicker = () => {
   const { theme, changeTheme } = useContext(ThemeContext)
+  const { lang } = useContext(LangContext)
 
   return (
     <div className="ThemePicker">
       <label htmlFor="dark-mode">
-        <Text tid="darkMode" />
+        {getLocalText(lang, 'darkMode')}
         <input
           type="checkbox"
           name="dark-mode"
