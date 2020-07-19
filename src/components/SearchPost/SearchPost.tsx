@@ -18,13 +18,13 @@ const SearchPost = (): JSX.Element => (
       nameId="cityInput"
       disabled={false}
     />
-
+    {/* TODO: When a city is picked, corresponding districst should be enabled */}
     <label htmlFor="district">
       <Text tid="district" />
     </label>
     <DropSearchList
       sortedItems={sortedCities}
-      nameId="cityInput"
+      nameId="districtInput"
       disabled={true}
     />
   </div>
