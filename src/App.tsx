@@ -6,6 +6,7 @@ import ThemePicker from 'components/ThemePicker/ThemePicker'
 import SliderPanel from 'components/SliderPanel/SliderPanel'
 import Home from 'pages/Home/Home'
 import Header from 'components/Header/Header'
+import LoginForm from 'components/LoginForm/LoginForm'
 
 function App(): JSX.Element {
   return (
@@ -17,6 +18,7 @@ function App(): JSX.Element {
 
       <Home>
         <Header />
+        <LoginForm />
       </Home>
     </div>
   )
